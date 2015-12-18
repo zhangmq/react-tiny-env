@@ -2,13 +2,13 @@
 
 最简react运行环境，仅供初学者学习使用。
 
-## Step 1
+## Install
 
 ```
 npm install webpack -g
 npm install
 ```
-## Step 2
+## Run
 
 ```
 npm start

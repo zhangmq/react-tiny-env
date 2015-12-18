@@ -2,16 +2,21 @@
 
 最简react运行环境，仅供初学者学习使用。
 
-```bash
+## Step 1
+
+```
 npm install webpack -g
 npm install
+```
+## Step 2
+
+```
 npm start
 
 ```
-
 or
 
-```bash
+```
 webpack -p -w
 node src/server.js
 ```

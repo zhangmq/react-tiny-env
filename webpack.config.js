@@ -2,10 +2,15 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    entry: "./src/client.js",
+    entry: [
+        'webpack-dev-server/client?http://localhost:3000',
+        'webpack/hot/only-dev-server',
+        './src/client.js'
+    ],
     output: {
         path: path.join(__dirname, '/build'),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: '/build/'
     },
     module: {
         loaders: [
@@ -13,13 +18,16 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loaders: [
-                    'babel-loader'
-                ]
+                    'react-hot',
+                    'babel'
+                ],
+                include: path.join(__dirname, 'src')
             },
         ]
     },
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false

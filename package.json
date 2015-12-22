@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "start": "webpack -p -w & node ./src/server.js"
+    "nodemon": "nodemon",
+    "start": "node webpack-dev-server.js"
   },
   "author": "",
   "license": "MIT",
@@ -18,6 +19,10 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "webpack": "^1.12.9"
+    "nodemon": "^1.8.1",
+    "react-hot-loader": "^1.3.0",
+    "shelljs": "^0.5.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }

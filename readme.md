@@ -5,7 +5,6 @@
 ## Install
 
 ```
-npm install webpack -g
 npm install
 ```
 ## Run
@@ -14,14 +13,5 @@ npm install
 npm start
 
 ```
-or
-
-```
-webpack -p -w
-node src/server.js
-```
-
-
-
 
 http://localhost:3000

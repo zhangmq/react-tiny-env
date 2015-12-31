@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+    debug: true,
     entry: [
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
@@ -18,10 +19,9 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loaders: [
-                    'react-hot',
                     'babel'
                 ]
-            },
+            }
         ]
     },
     devtool: 'inline-source-map',

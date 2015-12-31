@@ -14,4 +14,13 @@ npm start
 
 ```
 
-http://localhost:3000
+visit http://localhost:3000
+
+## build
+
+```
+npm run build
+
+```
+
+open ./index.production.html

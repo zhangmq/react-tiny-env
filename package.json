@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "nodemon": "nodemon",
+    "build": "webpack --config webpack.config.production.js",
     "start": "node webpack-dev-server.js"
   },
   "author": "",

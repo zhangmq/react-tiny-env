@@ -14,16 +14,14 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loaders: [
-                    'babel'
-                ]
+                loader: 'babel',
+                query: {
+                    presets: ["es2015", "react"]
+                }
             }
         ]
     },
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
-    },
+
     devtool: 'source-map',
     plugins: [
         new webpack.DefinePlugin({
